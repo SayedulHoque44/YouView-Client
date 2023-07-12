@@ -5,7 +5,7 @@ import Header from "../Shared/Header/Header";
 
 const MainLayouts = () => {
   return (
-    <div className="text-white">
+    <div className="text-white overflow-hidden">
       <Header />
       <Aside />
       <Home />

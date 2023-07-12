@@ -1,0 +1,7 @@
+.search-input {
+  border-radius: 40px 0 0 40px;
+  padding: 0 10px 0 20px;
+}
+.search-btn {
+  border-radius: 0 40px 40px 0;
+}
