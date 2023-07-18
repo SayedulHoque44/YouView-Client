@@ -1,4 +1,9 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+} from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { app } from "../Firebase/Firebase.confiq";
 
@@ -10,12 +15,19 @@ const YVProvider = ({ children }) => {
   //created Varriables
   const [isAsideOpen, setIsAsideOpen] = useState(true);
   const [user, setUser] = useState(null);
-
+  const [loading, setLoading] = useState(true);
   //use varriables
   const auth = getAuth(app);
+  const googleProvider = new GoogleAuthProvider();
+
+  //authenticaiton function
+  const signIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
 
   //Context Provide Values
-  const contextValue = { isAsideOpen, setIsAsideOpen, user, auth };
+  const contextValue = { isAsideOpen, setIsAsideOpen, user, auth, signIn };
 
   //component lifeCycle
   useEffect(() => {

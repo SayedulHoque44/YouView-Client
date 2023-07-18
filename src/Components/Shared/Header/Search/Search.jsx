@@ -1,6 +1,7 @@
 import React from "react";
 import { BiSolidMicrophone } from "react-icons/bi";
 import { IoIosSearch } from "react-icons/io";
+import YVIcon from "../../YVIcon";
 import "./Search.css";
 
 const Search = () => {
@@ -27,9 +28,11 @@ const Search = () => {
           <IoIosSearch size={24} className="text-YV_white" />
         </button>
       </form>
-      <button className="YV-btn ">
-        <BiSolidMicrophone size={24} />
-      </button>
+      <YVIcon
+        title={"Search With Your Voice"}
+        icon={<BiSolidMicrophone />}
+        YVBgColor={"#222222"}
+      />
     </div>
   );
 };

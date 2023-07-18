@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div
       className={`${
-        isAsideOpen ? "ml-44" : "ml-24"
+        isAsideOpen ? "ml-56" : "ml-24"
       } bg-blue-800  pt-14  h-[1000px]`}>
       <ShortList />
 
